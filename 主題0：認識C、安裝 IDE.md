@@ -26,10 +26,10 @@ title: 1101 計算機程式與應用 主題0：認識C、安裝 IDE
 
 ---
 
-:::info
-A programming language is the set of instructions through which humans interact with computers.
+
+> A programming language is the set of instructions through which humans interact with computers.
 The code is pretty much like writing a paragraph of instruction or creating a to-do list to computers. Unlike us humans, the to-do list and instructions you write for the computer has to be <font color=red>**extremely detailed**</font> and <font color=red>**written in some logic**</font>.
-:::
+
 
 撰寫程式碼就好像是在寫一段指令，或是為電腦列出一個 to-do list。而電腦並不像我們人類一樣，我們為電腦列出的 to-do list 需要非常的詳細，並且要用某種邏輯來撰寫。
 
