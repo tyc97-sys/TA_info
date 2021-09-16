@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        1101 計算機程式與應用 主題0：認識C、安裝 IDE - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.figma{display:table;position:relative;width:100%;padding-bottom:56.25%}.figma iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;border:1px solid #eee}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="主題0：認識C、安裝-IDE" data-id="主題0：認識C、安裝-IDE"><a class="anchor hidden-xs" href="#主題0：認識C、安裝-IDE" title="主題0：認識C、安裝-IDE"><span class="octicon octicon-link"></span></a><span>主題0：認識C、安裝 IDE</span></h1><h2 id="What-is-Programming" data-id="What-is-Programming"><a class="anchor hidden-xs" href="#What-is-Programming" title="What-is-Programming"><span class="octicon octicon-link"></span></a><span>What is Programming</span></h2><h3 id="Understanding-Programming-in-layman-terms-…" data-id="Understanding-Programming-in-layman-terms-…"><a class="anchor hidden-xs" href="#Understanding-Programming-in-layman-terms-…" title="Understanding-Programming-in-layman-terms-…"><span class="octicon octicon-link"></span></a><span>Understanding Programming in layman terms …</span></h3><blockquote>
+<p><span>Programming is a way to “</span><em><span>instruct the computer to perform various tasks</span></em><span>”.</span></p>
+</blockquote><h3 id="Instruct-the-computer" data-id="Instruct-the-computer"><a class="anchor hidden-xs" href="#Instruct-the-computer" title="Instruct-the-computer"><span class="octicon octicon-link"></span></a><span>Instruct the computer</span></h3><ul>
+<li><span>基本上意味著你向電腦提供了一組以電腦可以理解的語言編寫指令。</span></li>
+<li><span>指令可以是各種類型。</span></li>
+<li><span>就像我們人類可以理解好幾種語言一樣，電腦也可以理解特定的語法寫出來的指令。</span><br>
+<span>（就是所謂的 </span><strong><span>programming language</span></strong><span>）</span></li>
+</ul><h3 id="Perform-various-tasks" data-id="Perform-various-tasks"><a class="anchor hidden-xs" href="#Perform-various-tasks" title="Perform-various-tasks"><span class="octicon octicon-link"></span></a><span>Perform various tasks</span></h3><p><span>這些任務可以是簡單的任務，也可以是涉及多個指令序列的複雜任務。</span></p><hr><div class="alert alert-info">
+<p><span>A programming language is the set of instructions through which humans interact with computers.</span><br>
+<span>The code is pretty much like writing a paragraph of instruction or creating a to-do list to computers. Unlike us humans, the to-do list and instructions you write for the computer has to be </span><font color="red"><strong><span>extremely detailed</span></strong></font><span> and </span><font color="red"><strong><span>written in some logic</span></strong></font><span>.</span></p>
+</div><p><span>撰寫程式碼就好像是在寫一段指令，或是為電腦列出一個 to-do list。而電腦並不像我們人類一樣，我們為電腦列出的 to-do list 需要非常的詳細，並且要用某種邏輯來撰寫。</span></p><h2 id="程式語言的分類" data-id="程式語言的分類"><a class="anchor hidden-xs" href="#程式語言的分類" title="程式語言的分類"><span class="octicon octicon-link"></span></a><span>程式語言的分類</span></h2><h3 id="機器語言-Machine-Language" data-id="機器語言-Machine-Language"><a class="anchor hidden-xs" href="#機器語言-Machine-Language" title="機器語言-Machine-Language"><span class="octicon octicon-link"></span></a><span>機器語言 Machine Language</span></h3><ul>
+<li><span>指硬體內部所使用的語言，也是電腦唯一能直接辨識的語言。</span></li>
+<li><span>由於電腦是由電子電路所構成，在這個世界裡只懂得兩種訊號：1或0，用來表示開或關。也因此最早的電腦語言就是使用 0 和 1 所寫成的。</span></li>
+<li><span>完全由這兩個數字使用二進位編碼來表示要執行的命令，這種語言不需要經過任何翻譯，電腦就可以直接執行，這也就代表執行速度快，使用的電腦資源也少；但是要了結由「1」和「0」組合成的機器語言代表的意義，就必須透過查表才能得知，可讀性相當低，於是，組合語言、高階語言就陸陸續續產生了。</span></li>
+</ul><h3 id="組合語言-Assembly" data-id="組合語言-Assembly"><a class="anchor hidden-xs" href="#組合語言-Assembly" title="組合語言-Assembly"><span class="octicon octicon-link"></span></a><span>組合語言  Assembly</span></h3><ul>
+<li><span>最接近機器語言的程式語言。</span></li>
+<li><span>使用助憶符號（Mnemonics）取代機器語言的指令。例如：以 ADD 代表機器語言的加法動作指令。</span></li>
+<li><span>相較於機器語言，組合語言更有利於我們撰寫程式，但是電腦無法直接執行組合語言程式，因此執行前必須先翻譯成機器語言，而將組合語言翻譯成機器語言的工具我們稱它為組譯程式（Assembler）。</span></li>
+<li><span>通常我們會將組合語言和機器語言都歸類在「低階語言」，而所謂低階語言，就是比較能直接對硬體去做輸入或輸出控制的語言。組合語言與機器語言十分相似，撰寫這兩種程式碼之前都必須了解電腦的架構，才能正確使用。</span></li>
+</ul><h3 id="高階語言-High-Level-Language" data-id="高階語言-High-Level-Language"><a class="anchor hidden-xs" href="#高階語言-High-Level-Language" title="高階語言-High-Level-Language"><span class="octicon octicon-link"></span></a><span>高階語言 High-Level Language</span></h3><ul>
+<li><span>為了讓電腦更廣泛地使用，就出現了以人類日常生活中常使用的文字或符號來表達的程式語言，我們稱它為高階語言。其文法接近日常的英文用語，當然也包含一班常用的數學運算符號。</span></li>
+<li><span>從撰寫者的角度來看，比起低階語言，用高階語言所寫出來的程式較容易被我們所了解，也更容易維護。</span></li>
+<li><span>從電腦的角度來看，組合語言跟機器的相關性很高，不同的機器必須使用不同的組合語言，而高階語言在不同的機器上差異不大。</span></li>
+<li><span>但是電腦真正能夠理解的語言還是機器語言，所以高階語言還是必須先透過編譯程式（Compiler）或直譯程式（Interpreter）翻譯成機器語言才能執行。</span></li>
+</ul><h3 id="直譯程式-vs-編譯程式" data-id="直譯程式-vs-編譯程式"><a class="anchor hidden-xs" href="#直譯程式-vs-編譯程式" title="直譯程式-vs-編譯程式"><span class="octicon octicon-link"></span></a><span>直譯程式 vs. 編譯程式</span></h3><table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center"><span>直譯程式</span><br><span>Interpreted Language</span></th>
+<th style="text-align:center"><span>編譯程式</span><br><span>Compiled Language</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>說明</span></td>
+<td style="text-align:center"><span>需搭配直譯器（Interpreter）</span><br><span>每翻譯一行指令後，就立刻交付電腦執行，不須經過編譯。</span></td>
+<td style="text-align:center"><span>需搭配編譯器（Compiler）</span><br><span>將全部的程式翻譯後，先產生目的檔（.obj），再將其他要連結的程式連結以後，才交由電腦執行。</span></td>
+</tr>
+<tr>
+<td><span>優點</span></td>
+<td style="text-align:center"><span>佔用的記憶體較少。</span><br><span>修改及除錯容易。</span></td>
+<td style="text-align:center"><span>執行時不需要重複編譯，所以執行速度及效率較高。</span></td>
+</tr>
+<tr>
+<td><span>缺點</span></td>
+<td style="text-align:center"><span>每次執行前才翻譯，執行速度慢、效率較低。</span></td>
+<td style="text-align:center"><span>原始程式經過修改就必須重新編譯。</span><br><span>較佔用記憶體空間。</span></td>
+</tr>
+<tr>
+<td><span>舉例</span></td>
+<td style="text-align:center"><span>BASIC</span><br><span>HTML</span><br><span>JavaScript</span><br><span>Python</span><br><span>Ruby 等</span></td>
+<td style="text-align:center"><span>C/C++</span><br><span>COBAL</span><br><span>PASCAL 等</span></td>
+</tr>
+</tbody>
+</table><p><img src="https://i.imgur.com/rhfDN0j.png" alt="" loading="lazy"></p><h2 id="計算機程式組成與執行概念" data-id="計算機程式組成與執行概念"><a class="anchor hidden-xs" href="#計算機程式組成與執行概念" title="計算機程式組成與執行概念"><span class="octicon octicon-link"></span></a><span>計算機程式組成與執行概念</span></h2><h3 id="電腦怎麼來的？-ENIAC" data-id="電腦怎麼來的？-ENIAC"><a class="anchor hidden-xs" href="#電腦怎麼來的？-ENIAC" title="電腦怎麼來的？-ENIAC"><span class="octicon octicon-link"></span></a><span>電腦怎麼來的？ ENIAC</span></h3><ul>
+<li><span>我們認為最早的通用電腦是由美國賓州大學的莫奇來（Mauchly）和他的學生埃克特（Eckert）在 1946年2月14日當天所發表的「ENIAC」（Electronic Numerical Integrator And Computer，電子數值積分計算機）。</span></li>
+</ul><p><img src="https://i.imgur.com/Vy5WvYj.png" alt="" loading="lazy"></p><ul>
+<li><span>ENIAC 在進行每一次運算之前，都需要根據運算要求把不同的元件用人工插接線路的方式連接在一起。將輸入輸出裝置設置好後，才進行通電。</span></li>
+<li><span>因為 ENIAC 沒有儲存程式的功能。最早的計算機器僅內涵固定用途的程式。</span></li>
+</ul><h3 id="電腦怎麼來的？-EDVAC" data-id="電腦怎麼來的？-EDVAC"><a class="anchor hidden-xs" href="#電腦怎麼來的？-EDVAC" title="電腦怎麼來的？-EDVAC"><span class="octicon octicon-link"></span></a><span>電腦怎麼來的？ EDVAC</span></h3><ul>
+<li><span>EDVAC 全名是 Electronic Discrete Variable Automatic Computer，離散變量自動電子計算機。</span></li>
+<li><span>建造者跟 ENIAC 一樣皆由莫奇來（Mauchly）和埃克特（Eckert）。</span></li>
+<li><span>EDVAC 可以說是第一台現代意義的通用計算機，採用的是范紐曼架構。</span></li>
+</ul><p><img src="https://i.imgur.com/2pLBDXd.png" alt="" loading="lazy"></p><h3 id="范紐曼架構-Von-Neumann-Architecture" data-id="范紐曼架構-Von-Neumann-Architecture"><a class="anchor hidden-xs" href="#范紐曼架構-Von-Neumann-Architecture" title="范紐曼架構-Von-Neumann-Architecture"><span class="octicon octicon-link"></span></a><span>范紐曼架構 Von Neumann Architecture</span></h3><p><strong><span>范紐曼架構的設計概念</span></strong><br>
+<img src="https://i.imgur.com/cdaJlFK.png" alt="" loading="lazy"></p><ul>
+<li><span>范紐曼架構一詞出自約翰．范紐曼的論文 First Draft of a Report on the EDVAC, June 30, 1945，其中建立了現代電腦的兩大建構原則：</span>
+<ol>
+<li><span>大膽捨棄了十進制，改以二進制運算和儲存資料。</span></li>
+<li><span>要被執行的程式得先放在記憶體中，等要執行時再去記憶體中抓出來。</span></li>
+</ol>
+</li>
+<li><span>而這兩點原則都指向了報告最核心的概念－「儲存程序電腦」（Stored Program Computer）。</span></li>
+<li><span>1951年，美國軍方根據這份報告並透過范紐曼的協助打造了計算機 EDVAC。</span></li>
+</ul><hr><ul>
+<li><span>講白點，范紐曼架構就是一個打造電腦的數學模型，也是目前唯一被成功實作出來，全世界電腦唯一使用的數學模型。</span></li>
+<li><span>當然，電腦架構不只范紐曼架構，其他還有比如說：哈佛架構、仿生電腦、量子電腦等等，但基本上都還處於理論階段。</span></li>
+<li><span>另外補充，儲存程序電腦的概念並不是由范紐曼提出的，而是圖靈（Turing）提出來的圖靈機（Turing Machine）。在這裡推薦一部電影－</span><a href="https://youtu.be/spkUZQt_4pI" target="_blank" rel="noopener"><span>模仿遊戲</span></a><span>（ The Imitation Game ）</span></li>
+</ul><hr><ul>
+<li><span>范紐曼架構使用記憶體來儲存計算機的指令與資料（program），方便 CPU 可以根據中間的結果來修改後續指令。</span></li>
+<li><span>而在范紐曼式的電腦中，電腦被分成了五大單元缺一不可。</span>
+<ol>
+<li><span>控制器 Control Unit</span></li>
+<li><span>運算器 Arithmetic Logic Unit, ALU</span></li>
+<li><span>記憶體 Memory</span></li>
+<li><span>輸入設備 Input Device</span></li>
+<li><span>輸出設備 Output Device</span></li>
+</ol>
+</li>
+</ul><p><img src="https://i.imgur.com/1MMiXvD.png" alt="" loading="lazy"></p><h3 id="Why-better-than-ENIAC" data-id="Why-better-than-ENIAC"><a class="anchor hidden-xs" href="#Why-better-than-ENIAC" title="Why-better-than-ENIAC"><span class="octicon octicon-link"></span></a><span>Why better than ENIAC?</span></h3><p><span>因為我們會先把要執行的程式碼跟資料都儲存於記憶體，所以如果我們想要變更任務，只需要修改程式即可，不需要去更改線路，省去這個步驟的麻煩。</span></p><h3 id="指令集架構" data-id="指令集架構"><a class="anchor hidden-xs" href="#指令集架構" title="指令集架構"><span class="octicon octicon-link"></span></a><span>指令集架構</span></h3><ul>
+<li><span>任何產品在設計的時候，都要先制定規格、再依據規格設計出相應的產品。</span></li>
+<li><span>所以，當我們想要設計 CPU 時，要制定的規格就是「指令集架構」（Instruction Set Architecture, ISA）。</span></li>
+<li><span>指令集架構包含：</span>
+<ol>
+<li><span>指令集。</span></li>
+<li><span>該指令集依附的機器結構敘述（Hardware Information）</span></li>
+</ol>
+</li>
+</ul><hr><ul>
+<li><span>聽起來有點抽象，但是我們可以用一條簡單的敘述來描述指令集架構跟范紐曼架構的關係：</span></li>
+</ul><p><span class="mathjax raw">\[
+ISA + Von\text{ }Neuman\text{ }Machine = Basic\text{ }Computer\text{ }Structure
+\]</span></p><h5 id="如果對電腦的基底有興趣的話，未來可以去修「計算機程式」這門課-" data-id="如果對電腦的基底有興趣的話，未來可以去修「計算機程式」這門課-"><a class="anchor hidden-xs" href="#如果對電腦的基底有興趣的話，未來可以去修「計算機程式」這門課-" title="如果對電腦的基底有興趣的話，未來可以去修「計算機程式」這門課-"><span class="octicon octicon-link"></span></a><span>如果對電腦的基底有興趣的話，未來可以去修「計算機程式」這門課 </span><img class="emoji" alt=":smiley:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/smiley.png"></h5><h2 id="認識-C-語言" data-id="認識-C-語言"><a class="anchor hidden-xs" href="#認識-C-語言" title="認識-C-語言"><span class="octicon octicon-link"></span></a><span>認識 C 語言</span></h2><h3 id="C-Language-Introduction" data-id="C-Language-Introduction"><a class="anchor hidden-xs" href="#C-Language-Introduction" title="C-Language-Introduction"><span class="octicon octicon-link"></span></a><span>C-Language Introduction</span></h3><ul>
+<li><span>C 語言是由美國貝爾實驗室（Bell Laboratory）的 Dennis Ritchie 在 1972 年所開發出來的。</span></li>
+<li><span>前身是 B 語言（Basic Combined Programming Language - BCPL）。</span></li>
+<li><span>1978 年，Dennis Ritchie 和 Brain Kernighan 發布了第一版“ The C Programming Language”，俗稱  K&amp;RC。</span></li>
+<li><span>C 語言在各種平台上快速發展，之後出了許多版本，為了統一各版本，1983 年美國國家標準局（ANSI）成立了一個委員會，為 C 語言提供了一套標準，我們把這一套標準 C 稱為“ANSI standard”或“ANSI C”。而這套 ANSI C 也在 1989 年通過審查。於 1999 年進行了修訂。</span></li>
+</ul><h3 id="Features-of-C-Language" data-id="Features-of-C-Language"><a class="anchor hidden-xs" href="#Features-of-C-Language" title="Features-of-C-Language"><span class="octicon octicon-link"></span></a><span>Features of C-Language</span></h3><ul>
+<li><span>可靠性 Reliability</span></li>
+<li><span>可攜性 Portability</span></li>
+<li><span>靈活性 Flexibility</span></li>
+<li><span>互動性 Interactivity</span></li>
+<li><span>模組化 Modularity</span></li>
+<li><span>效率和有效性 Efficiency and Effectiveness</span></li>
+</ul><h3 id="Uses-of-C-Language" data-id="Uses-of-C-Language"><a class="anchor hidden-xs" href="#Uses-of-C-Language" title="Uses-of-C-Language"><span class="octicon octicon-link"></span></a><span>Uses of C-Language</span></h3><blockquote>
+<p><span>C 語言常用於開發作業系統（如：Windows、UNIX 和 Linux）</span></p>
+</blockquote><ul>
+<li><span>數據庫系統 Database systems</span></li>
+<li><span>Graphics packages</span></li>
+<li><span>文字處理器 Word processors</span></li>
+<li><span>試算表 Spreadsheets</span></li>
+<li><span>作業系統開發 Operating system development</span></li>
+<li><span>編譯程式與組譯程式 Compilers and Assemblers</span></li>
+<li><span>網路驅動 Network drivers</span></li>
+<li><span>直譯器 Interpreters</span></li>
+</ul><h3 id="C-程式的開發環境" data-id="C-程式的開發環境"><a class="anchor hidden-xs" href="#C-程式的開發環境" title="C-程式的開發環境"><span class="octicon octicon-link"></span></a><span>C 程式的開發環境</span></h3><blockquote>
+<p><span>C 程式在執行前會經過六個階段</span></p>
+</blockquote><ol>
+<li><span>編輯：使用者可利用編輯器撰寫或修改 C 程式碼（source code）。</span></li>
+<li><span>前置處理：前置處理器（preprocessor）會在開始編譯前自動執行，依據程式碼中 # 所標示的指示，進行代換或插入等動作。例如：</span><code>#include &lt;studio.h&gt;</code><span> 告訴編譯器在為編譯程式之前，先將程式庫中的標頭黨 </span><code>stdio.h</code><span> 插入該位置。</span></li>
+<li><span>編譯：編譯器（compiler）將程式碼編譯為目的碼（object code）。</span></li>
+<li><span>連結：連結器（linker）將一個或多個目的檔（.obj）與靜態程式庫檔（.lib）連結，產生可執行檔（.exe）。</span></li>
+<li><span>載入：載入器（loader）將可執行檔（.exe）載入記憶體，並與動態程式庫檔（.dll）連結。動態程式庫可減少執行檔所佔的硬碟和記憶體空間。</span></li>
+<li><span>執行：最後，電腦在 CPU 的控制下，開始執行所載入的程式。</span></li>
+</ol><p><img src="https://i.imgur.com/6YfJWhU.png" alt="" loading="lazy"></p></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li><a href="#主題0：認識C、安裝-IDE" title="主題0：認識C、安裝 IDE">主題0：認識C、安裝 IDE</a><ul class="nav">
+<li><a href="#What-is-Programming" title="What is Programming">What is Programming</a><ul class="nav">
+<li><a href="#Understanding-Programming-in-layman-terms-…" title="Understanding Programming in layman terms …">Understanding Programming in layman terms …</a></li>
+<li><a href="#Instruct-the-computer" title="Instruct the computer">Instruct the computer</a></li>
+<li><a href="#Perform-various-tasks" title="Perform various tasks">Perform various tasks</a></li>
+</ul>
+</li>
+<li><a href="#程式語言的分類" title="程式語言的分類">程式語言的分類</a><ul class="nav">
+<li><a href="#機器語言-Machine-Language" title="機器語言 Machine Language">機器語言 Machine Language</a></li>
+<li><a href="#組合語言-Assembly" title="組合語言  Assembly">組合語言  Assembly</a></li>
+<li><a href="#高階語言-High-Level-Language" title="高階語言 High-Level Language">高階語言 High-Level Language</a></li>
+<li><a href="#直譯程式-vs-編譯程式" title="直譯程式 vs. 編譯程式">直譯程式 vs. 編譯程式</a></li>
+</ul>
+</li>
+<li><a href="#計算機程式組成與執行概念" title="計算機程式組成與執行概念">計算機程式組成與執行概念</a><ul class="nav">
+<li><a href="#電腦怎麼來的？-ENIAC" title="電腦怎麼來的？ ENIAC">電腦怎麼來的？ ENIAC</a></li>
+<li><a href="#電腦怎麼來的？-EDVAC" title="電腦怎麼來的？ EDVAC">電腦怎麼來的？ EDVAC</a></li>
+<li><a href="#范紐曼架構-Von-Neumann-Architecture" title="范紐曼架構 Von Neumann Architecture">范紐曼架構 Von Neumann Architecture</a></li>
+<li><a href="#Why-better-than-ENIAC" title="Why better than ENIAC?">Why better than ENIAC?</a></li>
+<li><a href="#指令集架構" title="指令集架構">指令集架構</a></li>
+</ul>
+</li>
+<li><a href="#認識-C-語言" title="認識 C 語言">認識 C 語言</a><ul class="nav">
+<li><a href="#C-Language-Introduction" title="C-Language Introduction">C-Language Introduction</a></li>
+<li><a href="#Features-of-C-Language" title="Features of C-Language">Features of C-Language</a></li>
+<li><a href="#Uses-of-C-Language" title="Uses of C-Language">Uses of C-Language</a></li>
+<li><a href="#C-程式的開發環境" title="C 程式的開發環境">C 程式的開發環境</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li><a href="#主題0：認識C、安裝-IDE" title="主題0：認識C、安裝 IDE">主題0：認識C、安裝 IDE</a><ul class="nav">
+<li><a href="#What-is-Programming" title="What is Programming">What is Programming</a><ul class="nav">
+<li><a href="#Understanding-Programming-in-layman-terms-…" title="Understanding Programming in layman terms …">Understanding Programming in layman terms …</a></li>
+<li><a href="#Instruct-the-computer" title="Instruct the computer">Instruct the computer</a></li>
+<li><a href="#Perform-various-tasks" title="Perform various tasks">Perform various tasks</a></li>
+</ul>
+</li>
+<li><a href="#程式語言的分類" title="程式語言的分類">程式語言的分類</a><ul class="nav">
+<li><a href="#機器語言-Machine-Language" title="機器語言 Machine Language">機器語言 Machine Language</a></li>
+<li><a href="#組合語言-Assembly" title="組合語言  Assembly">組合語言  Assembly</a></li>
+<li><a href="#高階語言-High-Level-Language" title="高階語言 High-Level Language">高階語言 High-Level Language</a></li>
+<li><a href="#直譯程式-vs-編譯程式" title="直譯程式 vs. 編譯程式">直譯程式 vs. 編譯程式</a></li>
+</ul>
+</li>
+<li><a href="#計算機程式組成與執行概念" title="計算機程式組成與執行概念">計算機程式組成與執行概念</a><ul class="nav">
+<li><a href="#電腦怎麼來的？-ENIAC" title="電腦怎麼來的？ ENIAC">電腦怎麼來的？ ENIAC</a></li>
+<li><a href="#電腦怎麼來的？-EDVAC" title="電腦怎麼來的？ EDVAC">電腦怎麼來的？ EDVAC</a></li>
+<li><a href="#范紐曼架構-Von-Neumann-Architecture" title="范紐曼架構 Von Neumann Architecture">范紐曼架構 Von Neumann Architecture</a></li>
+<li><a href="#Why-better-than-ENIAC" title="Why better than ENIAC?">Why better than ENIAC?</a></li>
+<li><a href="#指令集架構" title="指令集架構">指令集架構</a></li>
+</ul>
+</li>
+<li><a href="#認識-C-語言" title="認識 C 語言">認識 C 語言</a><ul class="nav">
+<li><a href="#C-Language-Introduction" title="C-Language Introduction">C-Language Introduction</a></li>
+<li><a href="#Features-of-C-Language" title="Features of C-Language">Features of C-Language</a></li>
+<li><a href="#Uses-of-C-Language" title="Uses of C-Language">Uses of C-Language</a></li>
+<li><a href="#C-程式的開發環境" title="C 程式的開發環境">C 程式的開發環境</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
