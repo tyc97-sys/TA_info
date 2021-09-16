@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        主題1：變數&amp;資料型態、輸入輸出、運算子&amp;運算式 - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.figma{display:table;position:relative;width:100%;padding-bottom:56.25%}.figma iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;border:1px solid #eee}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="主題1：變數amp資料型態、輸入輸出、運算子amp運算式" data-id="主題1：變數amp資料型態、輸入輸出、運算子amp運算式"><a class="anchor hidden-xs" href="#主題1：變數amp資料型態、輸入輸出、運算子amp運算式" title="主題1：變數amp資料型態、輸入輸出、運算子amp運算式"><span class="octicon octicon-link"></span></a><span>主題1：變數&amp;資料型態、輸入輸出、運算子&amp;運算式</span></h1><h6 id="tags-TA-整理資料-ntust-1101" data-id="tags-TA-整理資料-ntust-1101"><a class="anchor hidden-xs" href="#tags-TA-整理資料-ntust-1101" title="tags-TA-整理資料-ntust-1101"><span class="octicon octicon-link"></span></a><span>tags: </span><code>TA-整理資料</code><span>, </span><code>ntust-1101</code></h6><h2 id="撰寫第一支程式" data-id="撰寫第一支程式"><a class="anchor hidden-xs" href="#撰寫第一支程式" title="撰寫第一支程式"><span class="octicon octicon-link"></span></a><span>撰寫第一支程式!!</span></h2><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	
+    <span class="token comment">/* some comments */</span>
+
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"PAUSE"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</div></div></code></pre><p><strong><span>我們一步一步拆開來看看</span></strong></p><h3 id="First-Block" data-id="First-Block"><a class="anchor hidden-xs" href="#First-Block" title="First-Block"><span class="octicon octicon-link"></span></a><span>First Block</span></h3><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+</div></div></code></pre><p><span>這是在 C program 編譯之前要處理的內容，我們稱為</span><strong><span>預處理命令</span></strong><span>（preprocessing command）。預處理命令還有很多，它們也都以 </span><code>#</code><span> 開頭，並且</span><strong><span>不用分號結尾</span></strong><span>。</span><br>
+<span>而 </span><code>stdio</code><span> 是 standard input output 的縮寫，也就是有關輸入輸出的標頭檔（head file）</span><br>
+<code>stdlib</code><span> 也就是 standard library，包含了 C 與 C++ 裡最常用的一些函數。</span></p><h3 id="Second-Block" data-id="Second-Block"><a class="anchor hidden-xs" href="#Second-Block" title="Second-Block"><span class="octicon octicon-link"></span></a><span>Second Block</span></h3><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code"><span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</div></div></code></pre><p><code>main function</code><span>，從這裡開始執行 C program。</span></p><h3 id="Third-Block" data-id="Third-Block"><a class="anchor hidden-xs" href="#Third-Block" title="Third-Block"><span class="octicon octicon-link"></span></a><span>Third Block</span></h3><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code"><span class="token comment">/* some comments */</span>
+</div></div></code></pre><p><span>註解，C program 不會編譯執行裡面的任何內容。單行註解的話使用雙斜線 </span><code>//</code></p><h3 id="Fourth-Block" data-id="Fourth-Block"><a class="anchor hidden-xs" href="#Fourth-Block" title="Fourth-Block"><span class="octicon octicon-link"></span></a><span>Fourth Block</span></h3><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code"><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</div></div></code></pre><p><code>printf</code><span> 指令可以輸出內容顯示在螢幕上。</span></p><h3 id="Fifth-Block" data-id="Fifth-Block"><a class="anchor hidden-xs" href="#Fifth-Block" title="Fifth-Block"><span class="octicon octicon-link"></span></a><span>Fifth Block</span></h3><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code"><span class="token function">system</span><span class="token punctuation">(</span>“PAUSE”<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</div></div></code></pre><p><span>程式暫停，按任意鍵繼續。</span></p><h2 id="Steps-to-Write-C-Programs-and-Get-the-Output" data-id="Steps-to-Write-C-Programs-and-Get-the-Output"><a class="anchor hidden-xs" href="#Steps-to-Write-C-Programs-and-Get-the-Output" title="Steps-to-Write-C-Programs-and-Get-the-Output"><span class="octicon octicon-link"></span></a><span>Steps to Write C Programs and Get the Output</span></h2><ul>
+<li><span>以下四個步驟任何 C program 都要遵循的步驟，對所有專案都通用。</span></li>
+<li><span>無論是只有數行的小程式或是包含好幾個檔案的大專案無一例外。</span></li>
+</ul><ol>
+<li><span>Create</span></li>
+<li><span>Compile</span></li>
+<li><span>Execute or Run</span></li>
+<li><span>Get the Output</span></li>
+</ol><h2 id="資料型態-Data-Type" data-id="資料型態-Data-Type"><a class="anchor hidden-xs" href="#資料型態-Data-Type" title="資料型態-Data-Type"><span class="octicon octicon-link"></span></a><span>資料型態 Data Type</span></h2><ul>
+<li><span>資料型態（data type）是在執行程式時用來定義變數（variable）的。</span></li>
+<li><span>變數、常數（constant）和陣列（array）在記憶體所佔的空間大小是由資料型態所決定的。</span></li>
+<li><span>C 的基本資料型態主要區分為：</span></li>
+</ul><table>
+<thead>
+<tr>
+<th><span>Types</span></th>
+<th><span>Data Types</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>Basic data types</span></td>
+<td><code>int</code><span>, </span><code>char</code><span>, </span><code>float</code><span>, </span><code>double</code></td>
+</tr>
+<tr>
+<td><span>Enumeration data type</span></td>
+<td><code>enum</code></td>
+</tr>
+<tr>
+<td><span>Derived data type</span></td>
+<td><code>pointer</code><span>, </span><code>array</code><span>, </span><code>structure</code><span>, </span><code>union</code></td>
+</tr>
+<tr>
+<td><span>Void data type</span></td>
+<td><code>void</code></td>
+</tr>
+</tbody>
+</table><blockquote>
+<p><span>列舉 (</span><code>enum</code><span> 或 </span><code>enumeration</code><span>) 是另一種複合型別，主要是用在宣告僅有少數值的型別，像是一星期內的日期 (day of week) 或是一年內的月份等。</span></p>
+</blockquote><h3 id="Basic-data-types-–-Integer" data-id="Basic-data-types-–-Integer"><a class="anchor hidden-xs" href="#Basic-data-types-–-Integer" title="Basic-data-types-–-Integer"><span class="octicon octicon-link"></span></a><span>Basic data types – Integer</span></h3><ul>
+<li><span>整數資料型態（integer data type）允許變數來儲存數值（numeric values）。</span></li>
+<li><span>關鍵字 </span><code>int</code><span> 是用來宣告整數資料型態。</span></li>
+<li><span>記憶體所佔的儲存空間可以是 2、4 或 8 byte。配置的記憶體長度在不同編譯器上各不相同，可容納的大小各不相同。</span></li>
+</ul><p><img src="https://i.imgur.com/Ktxsm3L.png" alt="" loading="lazy"></p><h3 id="Basic-data-types-–-Floating-Point" data-id="Basic-data-types-–-Floating-Point"><a class="anchor hidden-xs" href="#Basic-data-types-–-Floating-Point" title="Basic-data-types-–-Floating-Point"><span class="octicon octicon-link"></span></a><span>Basic data types – Floating Point</span></h3><ul>
+<li><span>浮點數（floating point）是用來將實數數位化表示的一種表示法，簡單來講就是可以用來宣告含小數點的數字。我們現在使用的是由 IEEE 制定的浮點數表示標準。</span></li>
+<li><span>資料型態分為兩種：</span>
+<ol>
+<li><span>float</span></li>
+<li><span>double</span></li>
+</ol>
+</li>
+<li><span>而兩者的差異在於「精確度」。</span><br>
+<img src="https://i.imgur.com/4AXr86n.png" alt="" loading="lazy"></li>
+</ul><table>
+<thead>
+<tr>
+<th><span>Keyword</span></th>
+<th><span>Byte</span></th>
+<th style="text-align:center"><span>Format String</span></th>
+<th style="text-align:center"><span>Comment</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>float</span></td>
+<td><span>4 bytes</span></td>
+<td style="text-align:center"><code>%f</code></td>
+<td style="text-align:center"><span>浮點數</span></td>
+</tr>
+<tr>
+<td><span>double</span></td>
+<td><span>8 bytes</span></td>
+<td style="text-align:center"><code>%lf</code><span>、</span><code>%l</code></td>
+<td style="text-align:center"><span>雙精度浮點數</span></td>
+</tr>
+</tbody>
+</table><h3 id="Basic-data-types-–-Character" data-id="Basic-data-types-–-Character"><a class="anchor hidden-xs" href="#Basic-data-types-–-Character" title="Basic-data-types-–-Character"><span class="octicon octicon-link"></span></a><span>Basic data types – Character</span></h3><ul>
+<li><span>字元（character）資料型態只允許變數儲存一個字元。</span></li>
+<li><span>所佔用的記憶體空間為 1 byte。</span></li>
+<li><span>用來儲存英文字母及 ASCII 碼。（字元可以跟整數型態互相轉換，也就是 ASCII 碼）</span></li>
+<li><span>關鍵字 </span><code>%c</code><span> 用來宣告字元資料型態。</span></li>
+</ul><h4 id="ASCII-Code" data-id="ASCII-Code"><a class="anchor hidden-xs" href="#ASCII-Code" title="ASCII-Code"><span class="octicon octicon-link"></span></a><span>ASCII Code</span></h4><p><img src="https://i.imgur.com/O78lPzO.png" alt="" loading="lazy"></p><h2 id="變數-Variable" data-id="變數-Variable"><a class="anchor hidden-xs" href="#變數-Variable" title="變數-Variable"><span class="octicon octicon-link"></span></a><span>變數 Variable</span></h2><blockquote>
+<p><span>Variable is a named location in a memory where a program can manipulate the data. This location is used to hold the value of the variable.</span></p>
+</blockquote><ul>
+<li><span>在程式設計的過程中，我們會需要紀錄某些資料，我們需要把這些資料紀錄在記憶體的某個位址中，並且給它一個名稱，這就是所謂的變數。</span></li>
+<li><span>變數的值（value）可以在程式中發生變化。</span></li>
+<li><span>變數可被宣告成任何 data type。</span></li>
+</ul><h3 id="Rules-for-naming-C-variable" data-id="Rules-for-naming-C-variable"><a class="anchor hidden-xs" href="#Rules-for-naming-C-variable" title="Rules-for-naming-C-variable"><span class="octicon octicon-link"></span></a><span>Rules for naming C variable</span></h3><ul>
+<li><span>變數名稱必須是由英文字母或是底線（）開頭。</span></li>
+<li><span>英文字母大小寫有差。</span></li>
+<li><span>可以由數字或字母組成。</span></li>
+<li><span>除了底線以外，不得使用任何特殊符號</span></li>
+<li><span>不能跟 C語言的保留字（reserved word）相同。</span></li>
+<li><span>舉例合格的變數名稱：</span>
+<ol>
+<li><span>sum</span></li>
+<li><span>height</span></li>
+<li><span>value</span></li>
+</ol>
+</li>
+</ul><h4 id="保留字-Reserved-word" data-id="保留字-Reserved-word"><a class="anchor hidden-xs" href="#保留字-Reserved-word" title="保留字-Reserved-word"><span class="octicon octicon-link"></span></a><span>保留字 Reserved word</span></h4><p><img src="https://i.imgur.com/T2mdIll.png" alt="" loading="lazy"></p><h3 id="變數宣告與初始化-Declaring-and-initializing-C-variables" data-id="變數宣告與初始化-Declaring-and-initializing-C-variables"><a class="anchor hidden-xs" href="#變數宣告與初始化-Declaring-and-initializing-C-variables" title="變數宣告與初始化-Declaring-and-initializing-C-variables"><span class="octicon octicon-link"></span></a><span>變數宣告與初始化 Declaring and initializing C variables</span></h3><ul>
+<li><span>在 C 語言裡變數需要在使用前進行宣告。</span></li>
+<li><span>而變數初始化（variable initialization）是指設定變數的值（value）。</span></li>
+</ul><p><img src="https://i.imgur.com/xlqWUPs.png" alt="" loading="lazy"></p><blockquote>
+<p><span>變數宣告需要在變數「初次」使用前完成，不可在其被使用後才進行宣告。</span><br>
+<span>至於宣告的位置並沒有特別規定，可以在任何地方進行宣告。</span><br>
+<span>不過還是習慣於最一開始的時候先進行宣告。</span></p>
+</blockquote><h2 id="常數-Constant" data-id="常數-Constant"><a class="anchor hidden-xs" href="#常數-Constant" title="常數-Constant"><span class="octicon octicon-link"></span></a><span>常數 Constant</span></h2><ul>
+<li><span>C 常數觀念跟變數一樣，唯一的差別是：一旦定義其值，程式將無法對其進行修改。簡單來說，常數就是一個「唯讀」的變數。</span></li>
+<li><span>代數（algebra）裡所謂的常數與程式語言裡的常數概念上有些不同：</span>
+<ul>
+<li><span>代數中的常數，例如：在 </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-3-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo>&amp;#x1D453;</mo></mrow><mo stretchy=&quot;false&quot;>(</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo>&amp;#x1D465;</mo></mrow><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><msup><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo>&amp;#x1D465;</mo></mrow><mn>3</mn></msup><mo>+</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo>&amp;#x1D450;</mo></mrow></math>" role="presentation" style="font-size: 113%; position: relative;"><span id="MJXc-Node-26" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-27" class="mjx-mrow"><span id="MJXc-Node-28" class="mjx-texatom"><span id="MJXc-Node-29" class="mjx-mrow"><span id="MJXc-Node-30" class="mjx-mo"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.501em;">f</span></span></span></span><span id="MJXc-Node-31" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">(</span></span><span id="MJXc-Node-32" class="mjx-texatom"><span id="MJXc-Node-33" class="mjx-mrow"><span id="MJXc-Node-34" class="mjx-mo"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">x</span></span></span></span><span id="MJXc-Node-35" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">)</span></span><span id="MJXc-Node-36" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.058em; padding-bottom: 0.335em;">=</span></span><span id="MJXc-Node-37" class="mjx-msubsup MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-38" class="mjx-texatom"><span id="MJXc-Node-39" class="mjx-mrow"><span id="MJXc-Node-40" class="mjx-mo"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">x</span></span></span></span></span><span class="mjx-sup" style="font-size: 70.7%; vertical-align: 0.513em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-41" class="mjx-mn" style=""><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.39em;">3</span></span></span></span><span id="MJXc-Node-42" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.279em; padding-bottom: 0.445em;">+</span></span><span id="MJXc-Node-43" class="mjx-texatom MJXc-space2"><span id="MJXc-Node-44" class="mjx-mrow"><span id="MJXc-Node-45" class="mjx-mo"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">c</span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow class="MJX-TeXAtom-ORD"><mo>𝑓</mo></mrow><mo stretchy="false">(</mo><mrow class="MJX-TeXAtom-ORD"><mo>𝑥</mo></mrow><mo stretchy="false">)</mo><mo>=</mo><msup><mrow class="MJX-TeXAtom-ORD"><mo>𝑥</mo></mrow><mn>3</mn></msup><mo>+</mo><mrow class="MJX-TeXAtom-ORD"><mo>𝑐</mo></mrow></math></span></span><script type="math/tex" id="MathJax-Element-3">𝑓(𝑥)=𝑥^3+𝑐</script></span><span> 中的 </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-4-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo>&amp;#x1D450;</mo></mrow></math>" role="presentation" style="font-size: 113%; position: relative;"><span id="MJXc-Node-46" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-47" class="mjx-mrow"><span id="MJXc-Node-48" class="mjx-texatom"><span id="MJXc-Node-49" class="mjx-mrow"><span id="MJXc-Node-50" class="mjx-mo"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">c</span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow class="MJX-TeXAtom-ORD"><mo>𝑐</mo></mrow></math></span></span><script type="math/tex" id="MathJax-Element-4">𝑐</script></span><span> 表示在自變數與因變數改變時維持固定的數字，它的值不是問題觀察的重點，但可以是某些合理的數字中的一個。</span></li>
+<li><span>程式語言中的常數在觀念上和程式中的變數是一致的，也就是說，常數是一個 CPU 紀錄數值資料的地方，只是 CPU 在整個程式執行過程中，只會去讀取該資料，而不會修改它。</span></li>
+</ul>
+</li>
+<li><span>經宣告並給定初始值後，就不再（且不允許）變更其數值的資料。</span></li>
+</ul><p><img src="https://i.imgur.com/qRSJWAQ.png" alt="" loading="lazy"></p><h2 id="C-語言的變數四要件" data-id="C-語言的變數四要件"><a class="anchor hidden-xs" href="#C-語言的變數四要件" title="C-語言的變數四要件"><span class="octicon octicon-link"></span></a><span>C 語言的變數四要件</span></h2><ul>
+<li><span>C 語言變數包含四個要件：</span>
+<ol>
+<li><span>資料型態 Data type</span></li>
+<li><span>識別字 Identifier</span>
+<ul>
+<li><span>電腦程式中，編譯器或是直譯器會透過識別字來了解程式碼的意義，有些識別字是內建的，像是保留字、內建變數、內建函式、標準函式庫的韓式等等。有些識別字則是程式設計者宣告後創造出來的，像是變數。</span></li>
+</ul>
+</li>
+<li><span>值 value</span></li>
+<li><span>可視度 Scope</span>
+<ul>
+<li><span>Scope 較白話的講法應該可以解釋為「變數範圍」，涉及許多層次，由小到大可以分為：區塊可見（block scope）、函式可見（function scope）、區域可見（local scope）、全域可見（global scope）。詳細內容之後還會再提到。</span></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul><hr><h2 id="printf-amp-scanf" data-id="printf-amp-scanf"><a class="anchor hidden-xs" href="#printf-amp-scanf" title="printf-amp-scanf"><span class="octicon octicon-link"></span></a><code>printf</code><span> &amp; </span><code>scanf</code></h2><ul>
+<li><span>輸入輸出函式（</span><code>printf</code><span>, </span><code>scanf</code><span>）是 C語言非常重要的函式，也是 C語言必學的兩個函式。在 C語言的程式中，幾乎每一個程式都會使用到這兩個函式，尤其是輸出函式。</span></li>
+<li><span>如果程式中需要使用 </span><code>printf</code><span> 或者是 </span><code>scanf</code><span>，那麼在撰寫時就需要引用標頭檔（head file）</span><code>stdio.h</code><span>。stdio 為 standard input output 的縮寫，而這兩個函式就包含在這個標頭檔裡。</span></li>
+<li><span>學習 C 的過程中，通常是從主控台（也就是文字模式）開始，為了與程式互動，在主控台下輸出程式結果，或是從主控台取得使用者的輸入資料是基本需求。其中 </span><code>printf</code><span> 的功能很強大，用法靈活，比較難掌握；而 </span><code>scanf</code><span> 用法相對比較固定。</span></li>
+</ul><h3 id="printf" data-id="printf"><a class="anchor hidden-xs" href="#printf" title="printf"><span class="octicon octicon-link"></span></a><code>printf</code></h3><ul>
+<li><code>printf</code><span>，print format 的縮寫。</span></li>
+</ul><p><strong><span>Syntax</span></strong><span>:</span></p><pre><code class="c hljs"><span class="token macro property"><span class="token directive-hash">#</span> <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>format<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><span>標準語法如上。</span><br>
+<span>以下舉幾個例子來示範 </span><code>printf</code><span> 的使用方法。</span></p><h4 id="printf字符串n" data-id="printf字符串n"><a class="anchor hidden-xs" href="#printf字符串n" title="printf字符串n"><span class="octicon octicon-link"></span></a><code>printf("字符串\n");</code></h4><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="token macro property"><span class="token directive-hash">#</span> <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello World!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><ul>
+<li><span>其中 </span><code>\n</code><span> 表示換行的意思，是一個跳脫字元。</span></li>
+<li><code>n</code><span> 為 new line 的縮寫。</span></li>
+<li><span>除此之外要注意的是，</span><code>printf</code><span> 裡必須使用雙引號（</span><code>"</code><span>），雙引號內的字幅串可以是英文，也可以是中文。</span></li>
+</ul><h4 id="printf輸出控制符，輸出參數" data-id="printf輸出控制符，輸出參數"><a class="anchor hidden-xs" href="#printf輸出控制符，輸出參數" title="printf輸出控制符，輸出參數"><span class="octicon octicon-link"></span></a><code>printf("輸出控制符"，輸出參數);</code></h4><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="token macro property"><span class="token directive-hash">#</span> <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><ul>
+<li><span>這個程式的意思就是讓變數 </span><code>i</code><span> 以十進制的方式輸出。</span></li>
+<li><span>不過 </span><code>i</code><span> 本身就是十進制，又為甚麼還要將 </span><code>i</code><span> 以十進制輸出？因為程式碼中，雖然寫的是 </span><code>i=10</code><span>，但是在記憶體中並不是將「</span><code>10</code><span>」這個十進制的值存進去，而是以二進制的方式存進去。所以我們在輸出的時候就必須要有「輸出控制符」（或稱格式指定字，format specifier）來告訴系統應該怎麼解讀這個二進制的數值。</span></li>
+</ul><h4 id="跳脫字元-Escape-Character" data-id="跳脫字元-Escape-Character"><a class="anchor hidden-xs" href="#跳脫字元-Escape-Character" title="跳脫字元-Escape-Character"><span class="octicon octicon-link"></span></a><span>跳脫字元 Escape Character</span></h4><p><img src="https://i.imgur.com/5aRukB9.png" alt="" loading="lazy"></p><h4 id="格式指定字-Format-Specifier" data-id="格式指定字-Format-Specifier"><a class="anchor hidden-xs" href="#格式指定字-Format-Specifier" title="格式指定字-Format-Specifier"><span class="octicon octicon-link"></span></a><span>格式指定字 Format Specifier</span></h4><p><img src="https://i.imgur.com/GAbN5c9.png" alt="" loading="lazy"></p><h3 id="scanf" data-id="scanf"><a class="anchor hidden-xs" href="#scanf" title="scanf"><span class="octicon octicon-link"></span></a><code>scanf</code></h3><ul>
+<li><code>scanf</code><span>，scan format 的縮寫。</span></li>
+<li><code>scanf</code><span> 與 </span><code>printf</code><span> 的用法幾乎完全一樣。但是需要注意以下兩點：</span>
+<ol>
+<li><span>scanf 裡面絕對不要包含 </span><code>\n</code></li>
+<li><span>scanf 後面不是直接放變數，前面需要再加上 </span><code>&amp;</code><span> ，不過字元或陣列</span><strong><span>不需要</span></strong><span>加上</span><code>&amp;</code><span> （至於為甚麼，等之後上到</span><strong><span>指標</span></strong><span>的時候會再解釋）。</span></li>
+</ol>
+</li>
+</ul><p><span>以下也示範幾個例子說明 scanf 的使用方法。</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+	<span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> d <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a+b = %d\n"</span><span class="token punctuation">,</span> a<span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d %d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>c<span class="token punctuation">,</span> <span class="token operator">&amp;</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"c*d = %d"</span><span class="token punctuation">,</span> c<span class="token operator">*</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</div></div></code></pre><p><img src="https://i.imgur.com/h6dWcHd.png" alt="" loading="lazy"></p><p><span>從鍵盤上輸入 </span><code>12</code><span>，按下 Enter 鍵之後，</span><code>scanf()</code><span> 就會讀取輸入數據並給定給變數 </span><code>a</code><span>，本次輸入結束。接著執行下一個 </span><code>scanf()</code><span>，再從鍵盤輸入 </span><code>60</code><span>，按下 Enter 鍵就會將 </span><code>60</code><span> 給定給變數 </span><code>b</code><span>。</span><br>
+<span>後面的 </span><code>scanf()</code><span> 有兩個用空格分開的 </span><code>%d</code><span>，後面跟著兩個變數 </span><code>c</code><span>、</span><code>d</code><span>，這個代表我們要一次輸入兩個整數，並且會分別給定給 </span><code>c</code><span> 和 </span><code>d</code><span>。注意，</span><code>%d %d</code><span> 之間是有空格的，所以我們在輸入數據時也要有空格。對於 </span><code>scanf()</code><span>，輸入數據的格式要和控制字符串的格式一樣。</span></p><pre><code class="c hljs"><span class="token function">scanf</span><span class="token punctuation">(</span>“<span class="token operator">%</span>d <span class="token operator">%</span>d”<span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 獲取使用者輸入的兩個整數，分別給定變數a和b</span>
+<span class="token function">printf</span><span class="token punctuation">(</span>“<span class="token operator">%</span>d <span class="token operator">%</span>d”<span class="token punctuation">,</span> a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 將變數a和b的值在螢幕上輸出</span>
+</code></pre><p><span>scanf 和 printf 非常相似，只是功能相反。</span></p><p><span>兩者都有格式控制字符串，都有變數，不同的是 scanf 的變數前需要加一個 </span><code>&amp;</code><span> 符號。</span><br>
+<span>而 </span><code>&amp;</code><span>稱為取址符號，也就是可以獲得變數在記憶體的位址。（詳細內容會在指標單元詳細介紹）</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">;</span> 
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d %d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a+b=%d\n"</span><span class="token punctuation">,</span> a<span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d %d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a+b=%d\n"</span><span class="token punctuation">,</span> a<span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d, %d, %d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">,</span> <span class="token operator">&amp;</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a+b+c=%d\n"</span><span class="token punctuation">,</span> a<span class="token operator">+</span>b<span class="token operator">+</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d is bigger than %d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a-b=%d\n"</span><span class="token punctuation">,</span> a<span class="token operator">-</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</div></div></code></pre><p><img src="https://i.imgur.com/VuLEfvM.png" alt="" loading="lazy"></p><ol>
+<li><span>第一個scanf()格式控制符為”%d %d”，中間只有一個空格，但是輸入時，多輸入一個空格。</span></li>
+<li><span>第二個scanf()格式控制符為”%d  %d”，中間有兩個空格，輸入卻只輸入一個。不過就算如此，print 出來的格式是正確的。這代表scanf()對輸入數據之間的空格處理比較寬鬆，並沒有嚴格要求空格的對應數量，只要有空格就可以了。</span></li>
+<li><span>第三個scanf()的控制符”%d, %d, %d”，中間用逗號分隔，所以輸入的整數也要用逗號分隔。</span></li>
+<li><span>第四個scanf()要求兩整數之間以is bigger than分隔。</span></li>
+</ol><p><span>使用者每次按下 Enter 鍵，程式就會認為完成了一次輸入操作，</span><code>scanf()</code><span> 開始讀取使用者的輸入內容，並且根據格式控制符中提取有效的數據，只要使用者輸入的內容和格式控制符匹配，就能夠正確提取。</span></p><hr><h4 id="scanf-連續輸入" data-id="scanf-連續輸入"><a class="anchor hidden-xs" href="#scanf-連續輸入" title="scanf-連續輸入"><span class="octicon octicon-link"></span></a><code>scanf</code><span> 連續輸入</span></h4><p><span>我們將前兩個程式碼改寫看看！</span><br>
+<img src="https://i.imgur.com/EkiRAVZ.png" alt="" loading="lazy"></p><ul>
+<li><span>一開始我們每輸入一個數值，就按一次 Enter 鍵，而這次我們一次輸入四個數值（中間以空格分隔）再按下 Enter，可以發現 scanf 都能正確讀取。</span></li>
+<li><span>到這邊，我們可以合理推斷第一個 </span><code>scanf()</code><span> 讀取完後並沒有拋棄多餘的值，而是將它們保存在某個地方，下次接著使用。</span></li>
+<li><span>而如果我們多輸入一個數字，依樣可以正確讀取，只是最後一個數值沒有使用而已。</span></li>
+</ul><p><img src="https://i.imgur.com/tba511h.png" alt="" loading="lazy"></p></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc expand"><ul class="nav">
+<li><a href="#主題1：變數amp資料型態、輸入輸出、運算子amp運算式" title="主題1：變數&amp;資料型態、輸入輸出、運算子&amp;運算式">主題1：變數&amp;資料型態、輸入輸出、運算子&amp;運算式</a><ul class="nav">
+<li><a href="#撰寫第一支程式" title="撰寫第一支程式!!">撰寫第一支程式!!</a><ul class="nav">
+<li><a href="#First-Block" title="First Block">First Block</a></li>
+<li><a href="#Second-Block" title="Second Block">Second Block</a></li>
+<li><a href="#Third-Block" title="Third Block">Third Block</a></li>
+<li><a href="#Fourth-Block" title="Fourth Block">Fourth Block</a></li>
+<li><a href="#Fifth-Block" title="Fifth Block">Fifth Block</a></li>
+</ul>
+</li>
+<li><a href="#Steps-to-Write-C-Programs-and-Get-the-Output" title="Steps to Write C Programs and Get the Output">Steps to Write C Programs and Get the Output</a></li>
+<li><a href="#資料型態-Data-Type" title="資料型態 Data Type">資料型態 Data Type</a><ul class="nav">
+<li><a href="#Basic-data-types-–-Integer" title="Basic data types – Integer">Basic data types – Integer</a></li>
+<li><a href="#Basic-data-types-–-Floating-Point" title="Basic data types – Floating Point">Basic data types – Floating Point</a></li>
+<li><a href="#Basic-data-types-–-Character" title="Basic data types – Character">Basic data types – Character</a></li>
+</ul>
+</li>
+<li><a href="#變數-Variable" title="變數 Variable">變數 Variable</a><ul class="nav">
+<li><a href="#Rules-for-naming-C-variable" title="Rules for naming C variable">Rules for naming C variable</a></li>
+<li><a href="#變數宣告與初始化-Declaring-and-initializing-C-variables" title="變數宣告與初始化 Declaring and initializing C variables">變數宣告與初始化 Declaring and initializing C variables</a></li>
+</ul>
+</li>
+<li><a href="#常數-Constant" title="常數 Constant">常數 Constant</a></li>
+<li><a href="#C-語言的變數四要件" title="C 語言的變數四要件">C 語言的變數四要件</a></li>
+<li><a href="#printf-amp-scanf" title="printf &amp; scanf">printf &amp; scanf</a><ul class="nav">
+<li><a href="#printf" title="printf">printf</a></li>
+<li><a href="#scanf" title="scanf">scanf</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">全部收起</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc expand"><ul class="nav">
+<li><a href="#主題1：變數amp資料型態、輸入輸出、運算子amp運算式" title="主題1：變數&amp;資料型態、輸入輸出、運算子&amp;運算式">主題1：變數&amp;資料型態、輸入輸出、運算子&amp;運算式</a><ul class="nav">
+<li><a href="#撰寫第一支程式" title="撰寫第一支程式!!">撰寫第一支程式!!</a><ul class="nav">
+<li><a href="#First-Block" title="First Block">First Block</a></li>
+<li><a href="#Second-Block" title="Second Block">Second Block</a></li>
+<li><a href="#Third-Block" title="Third Block">Third Block</a></li>
+<li><a href="#Fourth-Block" title="Fourth Block">Fourth Block</a></li>
+<li><a href="#Fifth-Block" title="Fifth Block">Fifth Block</a></li>
+</ul>
+</li>
+<li><a href="#Steps-to-Write-C-Programs-and-Get-the-Output" title="Steps to Write C Programs and Get the Output">Steps to Write C Programs and Get the Output</a></li>
+<li><a href="#資料型態-Data-Type" title="資料型態 Data Type">資料型態 Data Type</a><ul class="nav">
+<li><a href="#Basic-data-types-–-Integer" title="Basic data types – Integer">Basic data types – Integer</a></li>
+<li><a href="#Basic-data-types-–-Floating-Point" title="Basic data types – Floating Point">Basic data types – Floating Point</a></li>
+<li><a href="#Basic-data-types-–-Character" title="Basic data types – Character">Basic data types – Character</a></li>
+</ul>
+</li>
+<li><a href="#變數-Variable" title="變數 Variable">變數 Variable</a><ul class="nav">
+<li><a href="#Rules-for-naming-C-variable" title="Rules for naming C variable">Rules for naming C variable</a></li>
+<li><a href="#變數宣告與初始化-Declaring-and-initializing-C-variables" title="變數宣告與初始化 Declaring and initializing C variables">變數宣告與初始化 Declaring and initializing C variables</a></li>
+</ul>
+</li>
+<li><a href="#常數-Constant" title="常數 Constant">常數 Constant</a></li>
+<li><a href="#C-語言的變數四要件" title="C 語言的變數四要件">C 語言的變數四要件</a></li>
+<li><a href="#printf-amp-scanf" title="printf &amp; scanf">printf &amp; scanf</a><ul class="nav">
+<li><a href="#printf" title="printf">printf</a></li>
+<li><a href="#scanf" title="scanf">scanf</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">全部收起</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
